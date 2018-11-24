@@ -26,6 +26,9 @@ export class ArticleComponent implements OnInit {
   }
 
   ngOnInit() {
+    if (this.article !== null) {
+      console.log(this.article);
+    }
   }
 
 }

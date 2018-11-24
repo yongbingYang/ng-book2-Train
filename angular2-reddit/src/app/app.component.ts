@@ -7,10 +7,13 @@ import { Article } from './article/article.model';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  article: Article;
+  articles: Article[];
 
   constructor() {
-    this.article = new Article('Angular 2', 'http://angular.io', 10);
+    this.articles = [
+      new Article('Angular 1', 'http://angular.io', 10),
+      new Article('Angular 2', 'http://angular.io', 10),
+      new Article('Angular 3', 'http://angular.io', 10)];
   }
 
   addArticle(title: HTMLInputElement, link: HTMLInputElement): boolean {
