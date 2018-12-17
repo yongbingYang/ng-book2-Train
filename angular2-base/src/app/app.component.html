@@ -11,7 +11,6 @@
 <nz-row>
   <nz-form-control nzSpan="3">
     <label nz-checkbox [(ngModel)]="isShowSingleValue" name="isShowSingleValue">单值交互</label>
-    {{isShowSingleValue}}
   </nz-form-control>
   <nz-form-control *ngIf="isShowSingleValue" nzSpan="21">
     <app-single-input-value-monitor></app-single-input-value-monitor>
