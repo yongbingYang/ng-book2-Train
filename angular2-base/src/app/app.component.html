@@ -1,0 +1,28 @@
+<nz-row>
+  <nz-form-control nzSpan="5">
+    <label nz-checkbox [(ngModel)]="isShowLoadOrder" name="isShowLoadOrder">加载顺序</label>
+  </nz-form-control>
+  <nz-form-control *ngIf="isShowLoadOrder" nzSpan="5">
+    <app-load-order></app-load-order>
+  </nz-form-control>
+</nz-row>
+
+
+<nz-row>
+  <nz-form-control nzSpan="3">
+    <label nz-checkbox [(ngModel)]="isShowSingleValue" name="isShowSingleValue">单值交互</label>
+    {{isShowSingleValue}}
+  </nz-form-control>
+  <nz-form-control *ngIf="isShowSingleValue" nzSpan="21">
+    <app-single-input-value-monitor></app-single-input-value-monitor>
+  </nz-form-control>
+</nz-row>
+
+<nz-row>
+    <nz-form-control nzSpan="3">
+      <label nz-checkbox [(ngModel)]="isShowObjectValue" name="isShowObjectValue">对象交互</label>
+    </nz-form-control>
+    <nz-form-control *ngIf="isShowObjectValue" nzSpan="21">
+      <app-object-input-value-monitor></app-object-input-value-monitor>
+    </nz-form-control>
+  </nz-row>

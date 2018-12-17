@@ -1,0 +1,28 @@
+<p>
+  object-input-value-monitor works!
+</p>
+
+<nz-row>
+  <nz-col nzSpan="8">
+    <button (click)="objectRest()" nz-button>Reset</button>
+  </nz-col>
+</nz-row>
+<nz-row>
+  <nz-col nzSpan="8">
+    <nz-input-group nzCompact nzSearch>
+      <input nz-input type="text" [(ngModel)]="objectValue.singleStringValue">
+    </nz-input-group>
+  </nz-col>
+  <nz-col nzSpan="8">
+    <nz-input-group nzCompact nzSearch>
+      <input nz-input type="number" [(ngModel)]="objectValue.singleNumberValue">
+    </nz-input-group>
+  </nz-col>
+  <nz-col nzSpan="8">
+    <label nz-checkbox [(ngModel)]="objectValue.singleBoolean" nzName="singleBoolean">singleBoolean</label>
+  </nz-col>
+</nz-row>
+
+<nz-row>
+  <app-object-input-value-monitor-sub [objectValue]="objectValue"></app-object-input-value-monitor-sub>
+</nz-row>

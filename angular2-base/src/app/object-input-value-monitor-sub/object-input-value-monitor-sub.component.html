@@ -1,0 +1,19 @@
+<p>
+  object-input-value-monitor-sub works!
+</p>
+
+<nz-row>
+  <nz-col nzSpan="8">
+    <nz-input-group nzCompact nzSearch>
+      <input nz-input type="text" [(ngModel)]="objectValue.singleStringValue">
+    </nz-input-group>
+  </nz-col>
+  <nz-col nzSpan="8">
+    <nz-input-group nzCompact nzSearch>
+      <input nz-input type="number" [(ngModel)]="objectValue.singleNumberValue" nzName="singleBoolean">
+    </nz-input-group>
+  </nz-col>
+  <nz-col nzSpan="8">
+    <label nz-checkbox [(ngModel)]="objectValue.singleBoolean">singleBoolean</label>
+  </nz-col>
+</nz-row>

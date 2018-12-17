@@ -1,0 +1,24 @@
+<p>
+  single-input-value-monitor works!
+</p>
+
+<nz-row>
+  <nz-col nzSpan="8">
+    <nz-input-group nzCompact nzSearch>
+      <input nz-input type="text" [(ngModel)]="singleStringValue">
+    </nz-input-group>
+  </nz-col>
+  <nz-col nzSpan="8">
+    <nz-input-group nzCompact nzSearch>
+      <input nz-input type="number" [(ngModel)]="singleNumberValue">
+    </nz-input-group>
+  </nz-col>
+  <nz-col nzSpan="8">
+    <label nz-checkbox [(ngModel)]="singleBoolean" name="singleBoolean">singleBoolean</label>
+  </nz-col>
+</nz-row>
+
+<nz-row>
+  <app-single-input-value-monitor-sub [singleStringValue]="singleStringValue" [singleNumberValue]="singleNumberValue"
+    [singleBoolean]="singleBoolean"></app-single-input-value-monitor-sub>
+</nz-row>
